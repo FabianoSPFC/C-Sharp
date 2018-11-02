@@ -1,0 +1,50 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Abrir_fechar : MonoBehaviour {
+    bool mouseDentroDoObjeto;
+    bool tampaFechada;
+    public GameObject tampa;
+    public AudioClip shootSound;
+
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
+
+    void Awake ( ) {
+        mouseDentroDoObjeto = false;
+        tampaFechada = true;
+        source = GetComponent<AudioSource>();
+    }
+
+	void Update ( ) {
+		if ( mouseDentroDoObjeto == true) {
+            if (Input.GetMouseButtonDown (0 ) ) {
+                float vol = Random.Range(volLowRange, volHighRange);
+                source.PlayOneShot(shootSound, vol);
+                tampaFechada = ! tampaFechada;
+                if (tampaFechada == true)
+                {
+                    GetComponent<TextMesh>().text = "";
+                }
+                else
+                {
+                    GetComponent<TextMesh>().text = "Parabéns, sua Equipe ganhou 0.5 ponto.";
+                }
+            }
+        }
+        if ( tampaFechada == true) {
+            Vector3 rotacao45Graus = new Vector3(45, 0,  0);
+            tampa.transform.localEulerAngles = Vector3.Lerp(tampa.transform.localEulerAngles, rotacao45Graus, Time.deltaTime *0.5f);
+        } else {
+            tampa.transform.localEulerAngles = Vector3.Lerp(tampa.transform.localEulerAngles, Vector3.zero, Time.deltaTime);
+        }
+	}
+     void OnMouseEnter ( ) {
+        mouseDentroDoObjeto = true;
+    }
+    void OnMouseExit ( ) {
+        mouseDentroDoObjeto = false;
+    }
+}
