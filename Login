@@ -1,0 +1,110 @@
+using UnityEngine;
+using MySql.Data.MySqlClient;
+using UnityEngine.SceneManagement;
+using System;
+
+public class login : MonoBehaviour
+{
+
+    private Rect windowRect;
+
+    public float largura;
+    public float altura;
+
+    private string _Usuario = "";
+    private string _Senha = "";
+
+    private string _LinhaConexao;
+    private MySqlConnection conexao;    
+
+    void Start()
+    {
+        windowRect = new Rect((Screen.width / 2) - (largura / 2), (Screen.height / 2) - (altura / 2), largura, altura);
+
+        _LinhaConexao = "Server=;" +
+                                        "Database=;" +
+                                         "User ID=;" +
+                                         "Password=;" +
+                                         "Pooling=";
+        ConectarServer(_LinhaConexao);
+        LerDados(conexao);
+    }
+
+    void Update(){
+
+    }
+
+    void ConectarServer(string linhaConexao)
+    {
+        conexao = new MySqlConnection(linhaConexao);
+        conexao.Open();
+
+        Debug.Log("Conectado");
+    }
+
+   void LerDados(MySqlConnection Conexao)
+    {
+        MySqlCommand ComandoDB = Conexao.CreateCommand();
+        ComandoDB.CommandText = "SELECT * FROM usuarios";
+        MySqlDataReader leitor = ComandoDB.ExecuteReader();
+
+        while (leitor.Read())
+        {
+            string usuario = (string)leitor["Usuario"];
+            string senha = (string)leitor["Senha"];
+        }
+        leitor.Close();
+        leitor = null;
+    }
+
+    bool UsuarioCadastrado (MySqlConnection Conexao, string Usuario, string Senha) {
+        MySqlCommand  DBComando = Conexao.CreateCommand();
+        DBComando.CommandText = "SELECT Usuario, Senha FROM usuarios where Usuario = '" + Usuario + "'" + "AND Senha = '" + Senha + "'";
+        MySqlDataReader leitor = DBComando.ExecuteReader();
+
+        while ( leitor.Read())
+        {
+
+            if (leitor["Usuario"] != " "){
+                if (leitor["Senha"] != " ") {
+                    return true;
+                }
+            }return false;
+        }
+        leitor.Close();
+        leitor = null;
+        return false;
+
+    }
+
+    void OnGUI(){
+                windowRect = GUI.Window(0, windowRect, DoMyWindow, "Bem Vindo Ao Jogo do Baú");
+    }
+
+    void DoMyWindow(int windowID){
+
+        GUI.Box ( new Rect(10, 20, largura - 20, altura - 30), "");
+        GUI.Box(new Rect(15, 35,100,25), "Usuário");
+        GUI.Box(new Rect(15, 65, 100, 25), "Senha");
+
+        _Usuario = GUI.TextField(new Rect(largura - 175, 35, 160, 25), _Usuario);
+        _Senha = GUI.PasswordField(new Rect (largura - 175, 65, 160, 25), _Senha , "*" [0]);
+
+        bool logar = GUI.Button(new Rect(15, altura - 45, 100, 30), "Login");
+        if(logar){
+            if (UsuarioCadastrado(conexao, _Usuario, _Senha))
+            {
+                Debug.Log("Logado");
+                SceneManager.LoadScene(2);
+            }
+            else
+            {
+                Debug.Log("Usuário Não Existe");
+            }
+        }        
+        if (GUI.Button(new Rect(largura - 115, altura - 45, 100, 30), "Cadastrar"))
+        {
+            SceneManager.LoadScene(1); 
+        }
+    }
+}
