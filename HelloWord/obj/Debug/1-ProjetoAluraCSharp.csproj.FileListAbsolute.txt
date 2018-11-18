@@ -1,0 +1,7 @@
+C:\Users\Fabiano Filho\source\repos\CSharp-Alura\1-ProjetoAluraCSharp\bin\Debug\1-ProjetoAluraCSharp.exe.config
+C:\Users\Fabiano Filho\source\repos\CSharp-Alura\1-ProjetoAluraCSharp\bin\Debug\1-ProjetoAluraCSharp.exe
+C:\Users\Fabiano Filho\source\repos\CSharp-Alura\1-ProjetoAluraCSharp\bin\Debug\1-ProjetoAluraCSharp.pdb
+C:\Users\Fabiano Filho\source\repos\CSharp-Alura\1-ProjetoAluraCSharp\obj\Debug\1-ProjetoAluraCSharp.csprojAssemblyReference.cache
+C:\Users\Fabiano Filho\source\repos\CSharp-Alura\1-ProjetoAluraCSharp\obj\Debug\1-ProjetoAluraCSharp.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano Filho\source\repos\CSharp-Alura\1-ProjetoAluraCSharp\obj\Debug\1-ProjetoAluraCSharp.exe
+C:\Users\Fabiano Filho\source\repos\CSharp-Alura\1-ProjetoAluraCSharp\obj\Debug\1-ProjetoAluraCSharp.pdb
