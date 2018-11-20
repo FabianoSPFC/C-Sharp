@@ -1,0 +1,6 @@
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\Condicionais\obj\Debug\Condicionais.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\Condicionais\bin\Debug\Condicionais.exe.config
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\Condicionais\bin\Debug\Condicionais.exe
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\Condicionais\bin\Debug\Condicionais.pdb
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\Condicionais\obj\Debug\Condicionais.exe
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\Condicionais\obj\Debug\Condicionais.pdb
