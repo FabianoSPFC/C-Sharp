@@ -1,0 +1,7 @@
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\CalcularPoupanca\bin\Debug\CalcularPoupanca.exe.config
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\CalcularPoupanca\bin\Debug\CalcularPoupanca.exe
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\CalcularPoupanca\bin\Debug\CalcularPoupanca.pdb
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\CalcularPoupanca\obj\Debug\CalcularPoupanca.csprojAssemblyReference.cache
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\CalcularPoupanca\obj\Debug\CalcularPoupanca.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\CalcularPoupanca\obj\Debug\CalcularPoupanca.exe
+C:\Users\Fabiano Filho\Documents\Alura\CSharp-Alura\CalcularPoupanca\obj\Debug\CalcularPoupanca.pdb
