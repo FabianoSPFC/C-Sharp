@@ -1,0 +1,7 @@
+C:\Users\Fabiano Filho\source\repos\ContaCorrente\ContaCorrente\bin\Debug\ContaCorrente.exe.config
+C:\Users\Fabiano Filho\source\repos\ContaCorrente\ContaCorrente\bin\Debug\ContaCorrente.exe
+C:\Users\Fabiano Filho\source\repos\ContaCorrente\ContaCorrente\bin\Debug\ContaCorrente.pdb
+C:\Users\Fabiano Filho\source\repos\ContaCorrente\ContaCorrente\obj\Debug\ContaCorrente.csprojAssemblyReference.cache
+C:\Users\Fabiano Filho\source\repos\ContaCorrente\ContaCorrente\obj\Debug\ContaCorrente.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano Filho\source\repos\ContaCorrente\ContaCorrente\obj\Debug\ContaCorrente.exe
+C:\Users\Fabiano Filho\source\repos\ContaCorrente\ContaCorrente\obj\Debug\ContaCorrente.pdb
